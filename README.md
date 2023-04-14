@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# React + Apollo Project with TypeScript - Front-end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a front-end repository for a React + Apollo project with TypeScript. The repository has the following folder structure:
 
-## Available Scripts
+```html
+src/ - server/ - [Node.js backend code] - [React components]
+```
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+Before getting started, please ensure that you have the following installed in your development environment:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js (v14 or higher)
+- Yarn package manager
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To run the front-end of the React + Apollo project, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Install dependencies: In the root of the project, run yarn to install the necessary dependencies for the front-end.
+- Generate Prisma client: Navigate to the server folder by running cd src/server in your terminal. Then run npx prisma generate to generate the Prisma client for the backend.
+- Start the backend server: While still in the server folder, run yarn dev to start the backend server.
 
-### `npm run build`
+## Install Apollo Client
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To add Apollo Client and GraphQL to the front-end of the project, run the following command in the root of the src folder:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```html
+yarn add @apollo/client graphql
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will install Apollo Client and GraphQL packages in your project.
 
-### `npm run eject`
+## Start the Front-end
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To start the front-end, run yarn start in the root of the src folder. This will start the development server and open the React application in your default web browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Additional Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you encounter any issues or errors, please refer to the documentation or seek help from the project maintainers.
+Make sure to keep your dependencies up-to-date and follow the best practices for security and performance.
