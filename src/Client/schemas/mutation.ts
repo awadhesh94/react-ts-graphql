@@ -9,3 +9,19 @@ export const ADD_POST_MUTATION = gql`
     }
   }
 `;
+
+export const SINGIN_MUTATION = gql`
+  mutation SignInMutation($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+    }
+  }
+`;
+
+export const SINGUP_MUTATION = gql`
+  mutation SignInMutation($name: String!, $email: String!, $password: String!) {
+    signup(name: $name, email: $email, password: $password) {
+      token
+    }
+  }
+`;

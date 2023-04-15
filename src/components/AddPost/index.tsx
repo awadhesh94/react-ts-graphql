@@ -39,9 +39,11 @@ export const AddPostComponent = () => {
           setAddPost({ ...addPost, url: e.target.value });
         }}
       />
-      <button className='bg-brand-light-green px-6 py-2' onClick={() => addPostAction()}>
-        Add
-      </button>
+      {addPost?.description && addPost?.url && (
+        <button className='bg-brand-light-green px-6 py-2' onClick={() => addPostAction()}>
+          Add
+        </button>
+      )}
     </div>
   );
 };
