@@ -17,5 +17,5 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {},
-  "ignorePatterns": ["**/server/*.js"]
+  "ignorePatterns": ["server/**/*"]
 }
