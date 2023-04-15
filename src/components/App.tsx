@@ -4,6 +4,7 @@ import { LinkListComponent } from './LinkList';
 import { AddPostComponent } from './AddPost';
 import { Header } from './common/Header';
 import { SignInSignOutComponent } from './SignInSignOut';
+import { SearchComponent } from './common/Search';
 
 export const App = () => {
   return (
@@ -12,7 +13,8 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<LinkListComponent />} />
         <Route path='/add-post' element={<AddPostComponent />} />
-        <Route path='/login' element={<SignInSignOutComponent />} />{' '}
+        <Route path='/login' element={<SignInSignOutComponent />} />
+        <Route path='/search' element={<SearchComponent />} />{' '}
       </Routes>
     </div>
   );
