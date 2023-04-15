@@ -3,7 +3,7 @@ import { SignInSignOutProps } from '../../types/SignInSignOut';
 import { useMutation } from '@apollo/client';
 import { SINGIN_MUTATION, SINGUP_MUTATION } from '../../Client/schemas/mutation';
 import { useNavigate } from 'react-router';
-import { AUTH_TOKEN } from '../../Client/constent';
+import { AUTH_TOKEN } from '../../Client/api';
 
 export const SignInSignOutComponent = () => {
   const navigate = useNavigate();

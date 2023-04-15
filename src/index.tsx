@@ -5,8 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { App } from './components/App';
 import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { AUTH_TOKEN } from './Client/constent';
 import './index.css';
+import { AUTH_TOKEN } from './Client/api';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000',

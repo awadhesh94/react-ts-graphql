@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LinkProps } from '../../types/LinkListComponent';
+import { FeedProps, LinkProps } from '../../types/LinkListComponent';
 import { useMutation } from '@apollo/client';
 import { ADD_POST_MUTATION } from '../../Client/schemas/mutation';
+import { FEED_QUERY } from '../../Client/schemas/query';
 
 export const AddPostComponent = () => {
   const navigate = useNavigate();
@@ -15,6 +16,21 @@ export const AddPostComponent = () => {
     variables: {
       description: addPost?.description,
       url: addPost?.url,
+    },
+    update: (cache, { data: { post } }) => {
+      const data: FeedProps =
+        cache.readQuery({
+          query: FEED_QUERY,
+        }) || {};
+
+      cache.writeQuery({
+        query: FEED_QUERY,
+        data: {
+          feed: {
+            links: [post, ...(data?.feed?.links || [])],
+          },
+        },
+      });
     },
     onCompleted: () => navigate('/'),
   });

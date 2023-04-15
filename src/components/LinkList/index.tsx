@@ -14,8 +14,18 @@ export const LinkListComponent = () => {
           'loading'
         ) : (
           <>
-            {data?.feed?.links?.map(({ id, description, url }) => {
-              return <LinkComponent key={id} description={description} url={url} />;
+            {data?.feed?.links?.map(({ id, description, url, postedBy, votes }, index) => {
+              return (
+                <LinkComponent
+                  key={id}
+                  id={id}
+                  description={description}
+                  url={url}
+                  postedBy={postedBy}
+                  votes={votes}
+                  index={index + 1}
+                />
+              );
             })}
           </>
         )}
