@@ -7,8 +7,18 @@ export const FEED_QUERY = gql`
       links {
         id
         createdAt
-        description
         url
+        description
+        postedBy {
+          id
+          name
+        }
+        votes {
+          id
+          user {
+            id
+          }
+        }
       }
     }
   }
