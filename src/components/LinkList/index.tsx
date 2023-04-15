@@ -8,16 +8,18 @@ export const LinkListComponent = () => {
   const { data, loading }: dataProps = useQuery(FEED_QUERY);
 
   return (
-    <div className='flex flex-row flex-wrap py-4 px-8'>
-      {loading ? (
-        'loading'
-      ) : (
-        <>
-          {data?.feed?.links?.map(({ id, description, url }) => {
-            return <LinkComponent key={id} description={description} url={url} />;
-          })}
-        </>
-      )}
+    <div className='grid py-4 px-8'>
+      <div className='flex flex-row flex-wrap'>
+        {loading ? (
+          'loading'
+        ) : (
+          <>
+            {data?.feed?.links?.map(({ id, description, url }) => {
+              return <LinkComponent key={id} description={description} url={url} />;
+            })}
+          </>
+        )}
+      </div>
     </div>
   );
 };

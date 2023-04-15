@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { App } from './components/App';
@@ -16,9 +17,11 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
 );
 
 reportWebVitals();
