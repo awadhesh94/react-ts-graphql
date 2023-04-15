@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const fEED_QUERY = gql`
+export const FEED_QUERY = gql`
   {
     feed {
       id

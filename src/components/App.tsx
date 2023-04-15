@@ -3,7 +3,7 @@ import { LinkListComponent } from './LinkList';
 
 export const App = () => {
   return (
-    <div>
+    <div className='flex'>
       <LinkListComponent />
     </div>
   );
