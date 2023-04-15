@@ -16,6 +16,8 @@ export const Header = () => {
               <Link to='/add-post'>Add Post</Link>
             </>
           )}
+          <div>|</div>
+          <Link to='/search'>Search</Link>
         </div>
         {authToken ? (
           <Link
